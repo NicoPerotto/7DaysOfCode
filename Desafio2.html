@@ -1,0 +1,69 @@
+<!-- 
+    Decidí darle un giro. Mi objetivo era resolver el problema usando la menor cantidad de código JavaScript posible,
+    ya que es el lenguaje que mejor domino. Quería desafiarme a mí mismo y explorar los límites de HTML y CSS para manejar
+    la interactividad.
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Desafío Alura 2</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.min.css">
+    <style>
+    </style>
+</head>
+<body>
+
+    <main class="container">
+
+        <div class='step' id="step-1">
+            <h1>¿Cuál es tu nombre?</h1>
+            <input type="text" id="input-name" placeholder="Escribe tu respuesta">
+            <button onclick="setAnswer('name-placeholder','input-name');displayNext();">Siguiente</button>
+        </div>
+
+        <div class='step' id="step-2" style="display: none;">
+            <h1>¿Cuántos años tienes?</h1>
+            <input type="text" id="input-age" placeholder="Escribe tu respuesta">
+            <button onclick="setAnswer('age-placeholder','input-age');displayNext();">Siguiente</button>
+        </div>
+
+        <div class='step' id="step-3" style="display: none;">
+            <h1>¿Qué lenguaje de programación estás estudiando?</h1>
+            <input type="text" id="input-language" placeholder="Escribe tu respuesta">
+            <button onclick="setAnswer('language-placeholder','input-language');setAnswer('language-placeholder-2','input-language');displayNext();">Siguiente</button>
+        </div>
+
+        <div class='step' id="step-4" style="display: none;">
+            <p>
+                Hola <strong id="name-placeholder"></strong>, tienes <strong id="age-placeholder"></strong> años y ya estás aprendiendo <strong id="language-placeholder"></strong>!
+            </p>
+            <hr>
+            <p>¿Te gusta estudiar <strong id="language-placeholder-2"></strong>?</p>
+            <input type="radio" id="opcionSi" name='like' value="¡Muy bien! Sigue estudiando y tendrás mucho éxito." 
+                onchange="setAnswer('mensaje-opcional',this.id)"> <label for="opcionSi">SÍ</label>
+            <input type="radio" id="opcionNo" name='like' value="Oh, qué pena... ¿Ya intentaste aprender otros lenguajes?" 
+                onchange="setAnswer('mensaje-opcional',this.id)"> <label for="opcionNo"> NO</label>
+            <p id="mensaje-opcional"></p>
+        </div>
+    </main>
+
+    <script>
+        const respuestas = {};
+        function setAnswer(placeholder,input){
+            document.getElementById(placeholder).innerHTML = document.getElementById(input).value;
+        }
+
+        function displayNext() {
+            const steps = document.querySelectorAll('.step');
+            const currentStepIndex = Array.from(steps).findIndex(step => step.style.display !== 'none');
+            if (currentStepIndex !== -1 && currentStepIndex < steps.length - 1) {
+                steps[currentStepIndex].style.display = 'none';
+                steps[currentStepIndex + 1].style.display = 'block';
+            }
+        }
+
+    </script>
+</body>
+</html>
