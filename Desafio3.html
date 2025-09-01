@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Desafío Alura 3</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.min.css">
+    <style>
+    </style>
+</head>
+<body>
+
+    <main id="container" class="container">
+        <h1 id="title"></h1>
+        <p id="cta"></p>
+        <div id='options' class="grid">
+
+        </div>
+    </main>
+
+    <script>
+        let titleElement = document.getElementById('title');
+        let ctaElement = document.getElementById('cta');
+        let optionsElement = document.getElementById('options');
+        let learnedTechnologies = [];
+
+        const travel = [
+            //start, necesario para iniciar el camino
+            {option:'start', type:'', nextOptions:['Front-End','Back-End'], title:'Quieres comenzar tu aventura de aprendizaje en programación', cta: '¿Quieres seguir hacia el área de Front-End o seguir hacia el área de Back-End?'},
+            {option:'Front-End', type:'button', nextOptions:['React','Vue'], title:'Has elegido el camino del Front-End.', cta: '¿Quieres aprender React o aprender Vue?'},
+            {option:'Back-End', type:'button', nextOptions:['C#','Java'], title:'Has elegido el camino del Back-End.', cta: '¿Quieres aprender C# o aprender Java?'},
+            //opciones para Front-End
+            {option:'React', type:'button', nextOptions:['Fullstack','Front-End Especialización'], title:'React es una excelente opción para crear interfaces de usuario dinámicas.', cta: '¿Quieres seguir especializándote en Front-End o desarrollarte para ser Fullstack?'},
+            {option:'Vue', type:'button', nextOptions:['Fullstack','Front-End Especialización'], title:'Vue es conocido por su sencillez y facilidad de integración.', cta: '¿Quieres seguir especializándote en Front-End o desarrollarte para ser Fullstack?'},
+            //opciones para Back-End
+            {option:'C#', type:'button', nextOptions:['Fullstack','Back-End Especialización'], title:'C# es una tecnología poderosa, ideal para aplicaciones de escritorio y web con .NET.', cta: '¿Quieres seguir especializándote en Back-End o desarrollarte para ser Fullstack?'},
+            {option:'Java', type:'button', nextOptions:['Fullstack','Back-End Especialización'], title:'Java es un lenguaje versátil y muy utilizado en grandes sistemas empresariales.', cta: '¿Quieres seguir especializándote en Back-End o desarrollarte para ser Fullstack?'},
+            //opciones para Especialización
+            {option:'Fullstack', type:'button', nextOptions:['Otras Tecnologías','Finalizar'], title:'¡Increíble! Ser Fullstack te dará una visión completa del desarrollo web.', cta: ' ¿Que otras tecnologías te gustaría aprender?'},
+            {option:'Front-End Especialización', type:'button', nextOptions:['Otras Tecnologías','Finalizar'], title:'Enfocarse en Front-End te hará un experto en la experiencia del usuario.', cta: ' ¿Que otras tecnologías te gustaría aprender?'},
+            {option:'Back-End Especialización', type:'button', nextOptions:['Otras Tecnologías','Finalizar'], title:'Ser Fullstack te dará una visión completa del desarrollo web.', cta: ' ¿Que otras tecnologías te gustaría aprender?'},
+            //opciones para finalizar
+            {option:'Otras Tecnologías', type:'input', nextOptions:['Otras Tecnologías','Finalizar'], title:'', cta:'¿Que otras tecnologías te gustaría aprender?'},
+            {option:'Finalizar', type:'end-button', nextOptions:['list'], title:'¡Gracias! Esperamos que tengas un gran camino de aprendizaje.', cta:'Este es tu camino de aprendizaje elegido'},
+            //cierre, necesario para ver la lista
+            {option:'list', type:'list', nextOptions:[], title:'',cta:''},
+        ]
+
+        function makeTravel(option = 'start'){
+            console.log(option);
+           
+            const currentTravel = travel.find(t => t.option === option);
+            
+            titleElement.innerHTML = positivism() + currentTravel.title;
+            ctaElement.innerHTML = currentTravel.cta;
+            optionsElement.innerHTML = '';
+
+            for(nextOption of currentTravel.nextOptions){ //For como pedia el ejercicio
+                let nextTravel = travel.find(t => t.option === nextOption);
+                //if else como pide el ejercicio 
+                if(nextTravel.type == 'button'){
+                    optionsElement.appendChild( makeButton(nextOption));
+                }else if(nextTravel.type == 'end-button'){
+                    optionsElement.appendChild( makeButton(nextOption,false));
+                }else if(nextTravel.type == 'input'){
+                    optionsElement.appendChild( makeInput(nextOption));
+                }else{
+                    optionsElement.appendChild( makeList());
+                }
+            }
+
+        }
+
+        function makeButton(value,save = true) {
+            const button = document.createElement('button');
+            button.textContent = value;
+            button.addEventListener('click', ()=>{
+                if(save) learnedTechnologies.push(value);
+                makeTravel(value);
+            });
+            return button;
+        }
+
+        function makeInput(value) {
+            const container = document.createElement('div');
+            const input = document.createElement('input');
+            input.setAttribute('type', 'text');
+            input.setAttribute('placeholder', 'Ej: Python, SQL...');
+            const submitButton = document.createElement('button');
+            submitButton.textContent = 'Añadir';
+            submitButton.addEventListener('click', ()=>{
+                learnedTechnologies.push(input.value);
+                makeTravel(value);
+            });    
+            container.appendChild(input);
+            container.appendChild(submitButton);
+            return container;
+        }
+
+        function makeList() {
+            const list = document.createElement('ul');
+            for(tech of learnedTechnologies){
+                const listItem = document.createElement('li');
+                listItem.textContent = tech;
+                list.appendChild(listItem);
+            }
+            return list;
+        }
+
+        function positivism(){
+            let phrases = ["¡Excelente!","¡Genial!","¡Muy bien!","¡Fantástico!",
+            "¡Súper!","¡Increíble!","¡Correcto!","¡Así se hace!","¡Perfecto!"];
+            let index = Math.floor(Math.random() * (phrases.length));
+            return phrases[index];
+        }
+
+        makeTravel();
+    </script>
+</body>
+</html>
