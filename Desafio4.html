@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Desafío Alura 4</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.min.css">
+    <style>
+    </style>
+</head>
+<body>
+
+    <main id="container" class="container">
+        <h1>¡Adivina el número secreto entre 0 y 10!</h1>
+        <p id="message"></p>
+        <divclass="grid">
+            <input type="text" id="inputNumber" placeholder="Escribe el núemero aquí">
+            <button id='buttonSend' onclick="tryGuess();">Enviar</button>
+        </div>
+    </main>
+
+    <script>
+        // Definimos el número a adivinar.
+        const numeroSecreto = Math.floor(Math.random() * 11); //0 al 10
+        let intentosRestantes = 3;
+        let adivinado = false;
+
+        let inputNumber = document.getElementById('inputNumber');
+        let message = document.getElementById('message');
+        let buttonSend = document.getElementById('buttonSend');
+        message.innerHTML = `¡Tienes ${intentosRestantes} oportunidades para adivinar el número secreto!`
+
+
+        function tryGuess(){
+            if(inputNumber.value == numeroSecreto){
+                message.innerHTML = `¡Felicidades! ¡Adivinaste! ${inputNumber.value} es el número!`;
+                inputNumber.style.display = 'none';
+                buttonSend.style.display = 'none';
+            }else{
+                --intentosRestantes;
+                if(intentosRestantes > 0){
+                    message.innerHTML = `Incorrecto. ${inputNumber.value} no es le número secreto, intenta de nuevo. \n`; 
+                    message.innerHTML += (intentosRestantes > 1? `Quedan ${intentosRestantes} intentos`: '¡Última oportunidad!');
+                    inputNumber.value = '';
+                }else{
+                    message.innerHTML = "Se te acabaron los intentos. El número era " + numeroSecreto;
+                    inputNumber.style.display = 'none';
+                    buttonSend.style.display = 'none';
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>
