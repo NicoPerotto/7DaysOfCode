@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7DaysOfCode | ONE y Alura Latam</title>
+    
+    <meta name="description" content="7DaysOfCode de Alura Latam. Ejercita tus habilidades de programación con desafíos diarios y prácticos en esta iniciativa opcional de ONE.">
+    <meta property="og:title" content="7DaysOfCode | Desafíos de Programación con Alura Latam">
+    <meta property="og:description" content="Una iniciativa de Alura Latam para perfeccionar tu lógica de programación con desafíos diarios y prácticos.">
+    <meta property="og:type" content="website">
+    <title>7 Days of Code | Desafíos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        /* Estilos personalizados para la página */
+        footer {
+            height: 200px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <h1 class="text-center">7 Days of Code | Mariano Nicolás Perotto Ghi</h1>
+        <p>
+            ¡Bienvenido a mi colección de desafíos del <strong>7DaysOfCode</strong>! Esta es una iniciativa de Alura Latam, parte de ONE (Oracle Next Education), diseñada para perfeccionar la lógica de programación a través de ejercicios prácticos y diarios. Para hacerlos aún más desafiantes, a cada uno le he agregado un desafío personal. Aquí encontrarás mi progreso y las soluciones a cada uno. ¡Espero que te sea útil!
+        </p>
+        <section id="desafios">
+          
+         </section>
+    </main>
+
+    <script>
+        content = [
+            {
+                title:'Lógica JS 1/7: Operaciones Booleanas',
+                resultado:'',
+                codigo:'asd',
+                contenido: ''
+            },
+            {
+                title:'Lógica JS 2/7: Variables',
+                resultado:'Desafio2.html',
+                codigo:'https://github.com/NicoPerotto/7DaysOfCode/blob/main/Desafio2.html',
+                contenido:'aasasdsad  adas asd ad sad a'
+            },
+            {
+                title:'Lógica JS 3/7: Estructuras de control de flujo',
+                resultado:'Desafio3.html',
+                codigo:'https://github.com/NicoPerotto/7DaysOfCode/blob/main/Desafio3.html',
+                contenido:'aasasdsad  adas asd ad sad a'
+            },
+            {
+                title:' Lógica JS 4/7: Mas loops y randomización',
+                resultado:'Desafio4.html',
+                codigo:'https://github.com/NicoPerotto/7DaysOfCode/blob/main/Desafio4.html',
+                contenido:'aasasdsad  adas asd ad sad a'
+            },
+            {
+                title:'Lógica JS 5/7: No revelada',
+                resultado:'',
+                codigo:'asd',
+                contenido:'aasasdsad  adas asd ad sad a'
+            },
+            {
+                title:'Lógica JS 6/7: No revelada',
+                resultado:'',
+                codigo:'asd',
+                contenido:'aasasdsad  adas asd ad sad a'
+            },
+            {
+                title:'Lógica JS 7/7: No revelada',
+                resultado:'',
+                codigo:'asd',
+                contenido:'aasasdsad  adas asd ad sad a'
+            },
+        ]
+
+
+
+        function createElement(desafio){
+            const article = document.createElement('article');
+            const header = document.createElement('header');
+            const h2 = document.createElement('h2');
+            h2.textContent = desafio.title;
+            const gridDiv = document.createElement('div');
+            gridDiv.className = 'grid';
+
+            // Crea los botones de la grilla
+            const resultLink = document.createElement('a');
+            resultLink.href = desafio.resulado;
+            resultLink.setAttribute('role', 'button');
+            resultLink.textContent = 'Resultado';
+
+            const codeLink = document.createElement('a');
+            codeLink.href = desafio.codigo;
+            codeLink.setAttribute('role', 'button');
+            codeLink.textContent = 'Código';
+
+            // Agrega los botones a la grilla
+            gridDiv.appendChild(resultLink);
+            gridDiv.appendChild(codeLink);
+
+            // Agrega el <h2> y el <div> al <header>
+            header.appendChild(h2);
+            header.appendChild(gridDiv);
+
+            // 3. Crea el elemento <footer> y su contenido
+            const footer = document.createElement('footer');
+            const p = document.createElement('p');
+            p.innerHTML = desafio.contenido; // Puedes cambiar este texto
+            footer.appendChild(p);
+            article.appendChild(header);
+            article.appendChild(footer);
+            document.getElementById('desafios').appendChild(article);
+    }
+
+
+        content[5].contenido = ``;
+        content[4].contenido = ``;
+        content[3].contenido = `
+            <div class="m_3607409344675634494hse-column-container" style="min-width:280px;max-width:600px;margin:0 auto;background-color:#000000;padding-bottom:30px;padding-top:30px" bgcolor="#000000">
+            <div id="m_3607409344675634494column-0-0" class="m_3607409344675634494hse-column m_3607409344675634494hse-size-12">
+            <div id="m_3607409344675634494hs_cos_wrapper_module-0-0-0" style="color:inherit;font-size:inherit;line-height:inherit"><table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+            <tbody>
+            <tr>
+            <td class="m_3607409344675634494hs_padded" align="center" valign="top" style="font-family:Arial,sans-serif;color:#23496d;word-break:break-word;text-align:center;padding:10px 20px;font-size:0px">
+            <img alt="$2rp7nct8hor" src="https://ci3.googleusercontent.com/meips/ADKq_NZDJ_PuHLJgcS-4-obWvwKZ2-Nkl8m0s2Jnn4J3SUID9a0pCIlbSE55O2viYAnOf2IpDeAf28gzW2YoC4U40Jes5MtAVQ_tIM9lZ2yXB-SUTUyhSSm0nNM2Ll6I4_6b63LrW_hiBxZGETDTw7gshj8qDzpSZb7hh-wLhnLe=s0-d-e1-ft#https://empresas.alura.com.br/hs-fs/hubfs/$2rp7nct8hor.png?width=536&amp;upscale=true&amp;name=$2rp7nct8hor.png" style="outline:none;text-decoration:none;max-width:100%;font-size:16px" width="268" align="middle" class="m_3607409344675634494stretch-on-mobile CToWUd" data-bit="iit">
+            </td>
+            </tr>
+            </tbody>
+            </table></div>
+            <div id="m_3607409344675634494hs_cos_wrapper_module_17406636093974" style="color:inherit;font-size:inherit;line-height:inherit"><table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+            <tbody>
+            <tr>
+            <td class="m_3607409344675634494hs_padded" align="center" valign="top" style="font-family:Arial,sans-serif;color:#23496d;word-break:break-word;text-align:center;padding:10px 20px;font-size:0px">
+            <img alt="$wkftszli9" src="https://ci3.googleusercontent.com/meips/ADKq_NY8K_43i7nWpY4U1OuWm_aF7CxSwIHvkoOP1kqgaVPjQKw4amg8TPNZoDex1fExZ6Yhbi0jDJtspobj3zW23IlPonf17i5iCEtDaOo89C4xXE30XsY93A__XoVzbuoocPQhglhoqpHoMLNH9ALpIuAm-fS6vZRHVKE=s0-d-e1-ft#https://empresas.alura.com.br/hs-fs/hubfs/$wkftszli9.png?width=736&amp;upscale=true&amp;name=$wkftszli9.png" style="outline:none;text-decoration:none;max-width:100%;font-size:16px" width="368" align="middle" class="m_3607409344675634494stretch-on-mobile CToWUd" data-bit="iit">
+            </td>
+            </tr>
+            </tbody>
+            </table></div>
+            <table role="presentation" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="m_3607409344675634494hs_padded" style="font-family:Arial,sans-serif;font-size:15px;color:#23496d;word-break:break-word;padding:10px 20px"><div id="m_3607409344675634494hs_cos_wrapper_module-0-0-2" style="color:inherit;font-size:inherit;line-height:inherit"><div id="m_3607409344675634494hs_cos_wrapper_module-0-0-2_" style="color:inherit;font-size:inherit;line-height:inherit"><p style="line-height:175%"><span style="font-weight:400;color:#ffffff">Hola,Mariano Nicolás Perotto Ghi!</span></p>
+            <p style="line-height:175%">&nbsp;</p>
+            <p style="line-height:175%"><span style="font-weight:400;color:#ffffff">¡Has llegado a un nuevo día de #7DaysOfCode!</span></p>
+            <p style="line-height:175%">&nbsp;</p>
+            <p style="line-height:175%"><span style="font-weight:400;color:#ffffff">¿Y el desafío de ayer? ¿Lograste resolverlo? Como siempre, al final del correo te dejaré la solución que yo utilizaría.</span></p></div></div></td></tr></tbody></table>
+            <table role="presentation" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="font-family:Arial,sans-serif;font-size:15px;color:#23496d;word-break:break-word;padding:0px 0px 10px"><div id="m_3607409344675634494hs_cos_wrapper_module_17406638524153" style="color:inherit;font-size:inherit;line-height:inherit"><table role="none" border="0" cellpadding="0" cellspacing="0" style="vertical-align:top" width="100%">
+            <tbody><tr>
+            <td align="center" style="font-family:Arial,sans-serif;color:#23496d;font-size:0;word-break:break-word">
+            <p style="font-size:1px;border-top:2px solid #ffff00;width:100%;margin:0 auto"></p>
+
+            </td>
+            </tr>
+            </tbody></table></div></td></tr></tbody></table>
+            <table role="presentation" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="m_3607409344675634494hs_padded" style="font-family:Arial,sans-serif;font-size:15px;color:#23496d;word-break:break-word;padding:10px 20px"><div id="m_3607409344675634494hs_cos_wrapper_module_17406637941271" style="color:inherit;font-size:inherit;line-height:inherit"><div id="m_3607409344675634494hs_cos_wrapper_module_17406637941271_" style="color:inherit;font-size:inherit;line-height:inherit"><p style="line-height:175%;text-align:justify" align="justify"><span style="color:#ffffff"><span style="font-weight:400">¿Alguna vez has jugado a adivinar el número en el que tu amigo o amiga estaba pensando? Hoy volverás a tu infancia y harás exactamente eso. ¡Pero ahora,</span><strong> el juego será contra la propia computadora!</strong></span></p>
+            <p style="line-height:175%;text-align:justify" align="justify">&nbsp;</p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="color:#ffffff"><span style="font-weight:400">Debes crear un pequeño programa que</span><strong> comience con un valor específico predefinido entre 0 y 10</strong><span style="font-weight:400"> para el número que vas a adivinar (por ejemplo, el 7).</span></span></p>
+            <p style="line-height:175%;text-align:justify" align="justify">&nbsp;</p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="color:#ffffff"><span style="font-weight:400">A continuación, el programa te preguntará cuál es el valor que deseas adivinar y, si aciertas, te </span><strong>felicitará</strong><span style="font-weight:400">. Si te equivocas, te dará </span><strong>2 intentos más</strong><span style="font-weight:400">.</span></span></p>
+            <p style="line-height:175%;text-align:justify" align="justify">&nbsp;</p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="color:#ffffff"><span style="font-weight:400">Al final, si no aciertas en ninguno de los intentos,</span><strong> imprimirá cuál era el número inicial.</strong></span></p>
+            <p style="line-height:175%;text-align:justify" align="justify">&nbsp;</p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#ffffff">Después de que el programa esté funcionando, intenta usar un número aleatorio en lugar de uno predefinido.</span></p></div></div></td></tr></tbody></table>
+            </div>
+            </div>        
+        `;
+        content[2].contenido = `
+            <div id="m_-2035492605164980926column-0-0" class="m_-2035492605164980926hse-column m_-2035492605164980926hse-size-12">
+            <div id="m_-2035492605164980926hs_cos_wrapper_module-0-0-0" style="color:inherit;font-size:inherit;line-height:inherit"><table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+            <tbody>
+            <tr>
+            <td class="m_-2035492605164980926hs_padded" align="center" valign="top" style="font-family:Arial,sans-serif;color:#23496d;word-break:break-word;text-align:center;padding:10px 20px;font-size:0px">
+            <img alt="$2rp7nct8hor" src="https://ci3.googleusercontent.com/meips/ADKq_NZDJ_PuHLJgcS-4-obWvwKZ2-Nkl8m0s2Jnn4J3SUID9a0pCIlbSE55O2viYAnOf2IpDeAf28gzW2YoC4U40Jes5MtAVQ_tIM9lZ2yXB-SUTUyhSSm0nNM2Ll6I4_6b63LrW_hiBxZGETDTw7gshj8qDzpSZb7hh-wLhnLe=s0-d-e1-ft#https://empresas.alura.com.br/hs-fs/hubfs/$2rp7nct8hor.png?width=536&amp;upscale=true&amp;name=$2rp7nct8hor.png" style="outline:none;text-decoration:none;max-width:100%;font-size:16px" width="268" align="middle" class="m_-2035492605164980926stretch-on-mobile CToWUd" data-bit="iit">
+            </td>
+            </tr>
+            </tbody>
+            </table></div>
+            <div id="m_-2035492605164980926hs_cos_wrapper_module_17406636093974" style="color:inherit;font-size:inherit;line-height:inherit"><table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+            <tbody>
+            <tr>
+            <td class="m_-2035492605164980926hs_padded" align="center" valign="top" style="font-family:Arial,sans-serif;color:#23496d;word-break:break-word;text-align:center;padding:10px 20px;font-size:0px">
+            <img alt="$wkftszli9" src="https://ci3.googleusercontent.com/meips/ADKq_NY8K_43i7nWpY4U1OuWm_aF7CxSwIHvkoOP1kqgaVPjQKw4amg8TPNZoDex1fExZ6Yhbi0jDJtspobj3zW23IlPonf17i5iCEtDaOo89C4xXE30XsY93A__XoVzbuoocPQhglhoqpHoMLNH9ALpIuAm-fS6vZRHVKE=s0-d-e1-ft#https://empresas.alura.com.br/hs-fs/hubfs/$wkftszli9.png?width=736&amp;upscale=true&amp;name=$wkftszli9.png" style="outline:none;text-decoration:none;max-width:100%;font-size:16px" width="368" align="middle" class="m_-2035492605164980926stretch-on-mobile CToWUd" data-bit="iit">
+            </td>
+            </tr>
+            </tbody>
+            </table></div>
+            <table role="presentation" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="m_-2035492605164980926hs_padded" style="font-family:Arial,sans-serif;font-size:15px;color:#23496d;word-break:break-word;padding:10px 20px"><div id="m_-2035492605164980926hs_cos_wrapper_module-0-0-2" style="color:inherit;font-size:inherit;line-height:inherit"><div id="m_-2035492605164980926hs_cos_wrapper_module-0-0-2_" style="color:inherit;font-size:inherit;line-height:inherit"><p style="line-height:175%;text-align:justify" align="justify"><span style="color:#ffffff"><span style="font-weight:400">¡Ya llegaste al tercer día!<br><br></span><span style="font-weight:400">¡Sigue así!<br><br></span><span style="font-weight:400">Por cierto, ¿qué te pareció el desafío de ayer? Al final de este correo te dejo mi idea de solución y me encantaría saber la diferencia con la tuya.</span></span></p></div></div></td></tr></tbody></table>
+            <table role="presentation" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="font-family:Arial,sans-serif;font-size:15px;color:#23496d;word-break:break-word;padding:0px 0px 10px"><div id="m_-2035492605164980926hs_cos_wrapper_module_17406638524153" style="color:inherit;font-size:inherit;line-height:inherit"><table role="none" border="0" cellpadding="0" cellspacing="0" style="vertical-align:top" width="100%">
+            <tbody><tr>
+            <td align="center" style="font-family:Arial,sans-serif;color:#23496d;font-size:0;word-break:break-word">
+            <p style="font-size:1px;border-top:2px solid #ffff00;width:100%;margin:0 auto"></p>
+
+            </td>
+            </tr>
+            </tbody></table></div></td></tr></tbody></table>
+            <table role="presentation" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="m_-2035492605164980926hs_padded" style="font-family:Arial,sans-serif;font-size:15px;color:#23496d;word-break:break-word;padding:10px 20px"><div id="m_-2035492605164980926hs_cos_wrapper_module_17406637941271" style="color:inherit;font-size:inherit;line-height:inherit"><div id="m_-2035492605164980926hs_cos_wrapper_module_17406637941271_" style="color:inherit;font-size:inherit;line-height:inherit"><p style="line-height:175%;text-align:justify" align="justify"><span style="color:#ffffff"><span style="font-weight:400">¿Alguna vez has jugado un</span><strong> juego que te dé más de una opción</strong><span style="font-weight:400"> y, dependiendo de lo que elijas, el destino del personaje sea completamente diferente?</span></span></p>
+            <p style="line-height:175%;text-align:justify" align="justify">&nbsp;</p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="color:#ffffff"><strong>Hoy vas a desarrollar un ejemplo así con Javascript.</strong></span></p>
+            <p style="line-height:175%;text-align:justify" align="justify">&nbsp;</p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="color:#ffffff"><span style="font-weight:400">Quiero que trabajes con estructuras de control de flujo. Esta forma complicada de decirlo significa que, al igual que en los juegos,</span><strong> la historia que desarrolles debe adaptarse a las respuestas dadas por quien está jugando</strong><span style="font-weight:400">.</span></span></p>
+            <p style="line-height:175%;text-align:justify" align="justify">&nbsp;</p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="color:#ffffff"><span style="font-weight:400">Para ello, necesitarás algunas estructuras capaces de alterar el flujo de la aplicación, como </span><span style="font-weight:400"><span style="font-family:'courier new',courier,serif">for, while, if</span> y <span style="font-family:'courier new',courier,serif">else</span></span><span style="font-weight:400">. Todas estas pueden cumplir con este objetivo, dada una cierta condición.</span></span></p>
+            <p style="line-height:175%;text-align:justify" align="justify">&nbsp;</p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="color:#ffffff"><span style="font-weight:400">El </span><span style="font-weight:400;font-family:'courier new',courier,serif">if</span><span style="font-weight:400"> y el </span><span style="font-weight:400;font-family:'courier new',courier,serif">else</span><span style="font-weight:400">, que ya te he mostrado en los últimos días, son capaces de crear ramificaciones dentro de la aplicación para que se tome una u otra acción, dependiendo de la condición proporcionada.</span></span></p>
+            <p style="line-height:175%;text-align:justify" align="justify">&nbsp;</p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="color:#ffffff"><span style="font-weight:400">Los </span><strong><em>bucles </em></strong><span style="font-weight:400">(como </span><span style="font-weight:400;font-family:'courier new',courier,serif">for</span><span style="font-weight:400"> y </span><span style="font-weight:400;font-family:'courier new',courier,serif">while</span><span style="font-weight:400">) son capaces de transformar una tarea repetitiva en pocas líneas de código, sin importar cuántas veces necesites repetir esa tarea.</span></span></p>
+            <p style="line-height:175%;text-align:justify" align="justify">&nbsp;</p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#ffffff">Tu desafío de hoy es crear los destinos posibles de un juego, en el que el usuario pueda elegir:</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify">&nbsp;</p>
+            <ol style="line-height:175%;text-align:justify" align="justify">
+            <li><span style="color:#ffffff"><span style="font-weight:400"> Si quiere </span><strong>seguir hacia el área de Front-End o seguir hacia el área de Back-End</strong><span style="font-weight:400">.</span></span></li>
+            </ol>
+            <p style="line-height:175%;text-align:justify" align="justify">&nbsp;</p>
+            <ol style="line-height:175%;text-align:justify" start="2" align="justify">
+            <li><span style="color:#ffffff"><span style="font-weight:400"> Si está en el área de </span><strong>Front-End</strong><span style="font-weight:400">, si quiere </span><strong>aprender React</strong><span style="font-weight:400"> o </span><strong>aprender Vue</strong><span style="font-weight:400">. Si está en el área de</span><strong> Back-End</strong><span style="font-weight:400">, podrá </span><strong>aprender C#</strong><span style="font-weight:400"> o </span><strong>aprender Java</strong><span style="font-weight:400">.</span></span></li>
+            </ol>
+            <p style="line-height:175%;text-align:justify" align="justify">&nbsp;</p>
+            <ol style="line-height:175%;text-align:justify" start="3" align="justify">
+            <li><span style="color:#ffffff"><span style="font-weight:400"> Después, independientemente de las elecciones anteriores, el usuario podrá elegir entre </span><strong>seguir especializándose en el área elegida o desarrollarse para convertirse en Fullstack</strong><span style="font-weight:400">. Debes mostrar en pantalla un mensaje específico para cada elección.</span></span></li>
+            </ol>
+            <p style="line-height:175%;text-align:justify" align="justify">&nbsp;</p>
+            <ol style="line-height:175%;text-align:justify" start="4" align="justify">
+            <li><span style="color:#ffffff"><span style="font-weight:400"> Finalmente, </span><strong>pregunta en qué tecnologías le gustaría a la persona especializarse</strong><span style="font-weight:400"> o conocer. Aquí, la persona puede responder N tecnologías, una a la vez. Entonces, mientras continúe respondiendo **ok** a la pregunta: </span><em><span style="font-weight:400">"¿Hay alguna otra tecnología que te gustaría aprender?"</span></em><span style="font-weight:400">, sigue presentando el Prompt, para que complete el nombre de la tecnología en cuestión. Y, justo después, presenta un mensaje comentando algo sobre la tecnología ingresada.</span></span></li>
+            </ol>
+            <p style="line-height:175%;text-align:justify" align="justify">&nbsp;</p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="color:#ffffff"><span style="font-weight:400">Lo importante es que la persona que esté jugando siempre pueda </span><strong>elegir qué decisión tomar para aprender</strong><span style="font-weight:400"> y desarrollarse en el área de programación.</span></span></p>
+            <p style="line-height:175%;text-align:justify" align="justify">&nbsp;</p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="color:#ffffff"><span style="font-weight:400">Además, también es esencial que, al final del juego, pueda</span><strong> ingresar tantas tecnologías como desee en la lista de aprendizaje</strong><span style="font-weight:400">.</span></span></p></div></div></td></tr></tbody></table>
+            </div>
+        `;
+        content[1].contenido = `
+            <div id="m_-2172027481938202562column-0-0" class="m_-2172027481938202562hse-column m_-2172027481938202562hse-size-12">
+            <div id="m_-2172027481938202562hs_cos_wrapper_module-0-0-0" style="color:inherit;font-size:inherit;line-height:inherit"><table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+            <tbody>
+            <tr>
+            <td class="m_-2172027481938202562hs_padded" align="center" valign="top" style="font-family:Arial,sans-serif;color:#23496d;word-break:break-word;text-align:center;padding:10px 20px;font-size:0px">
+            <img alt="$2rp7nct8hor" src="https://ci3.googleusercontent.com/meips/ADKq_NZDJ_PuHLJgcS-4-obWvwKZ2-Nkl8m0s2Jnn4J3SUID9a0pCIlbSE55O2viYAnOf2IpDeAf28gzW2YoC4U40Jes5MtAVQ_tIM9lZ2yXB-SUTUyhSSm0nNM2Ll6I4_6b63LrW_hiBxZGETDTw7gshj8qDzpSZb7hh-wLhnLe=s0-d-e1-ft#https://empresas.alura.com.br/hs-fs/hubfs/$2rp7nct8hor.png?width=536&amp;upscale=true&amp;name=$2rp7nct8hor.png" style="outline:none;text-decoration:none;max-width:100%;font-size:16px" width="268" align="middle" class="m_-2172027481938202562stretch-on-mobile CToWUd" data-bit="iit">
+            </td>
+            </tr>
+            </tbody>
+            </table></div>
+            <div id="m_-2172027481938202562hs_cos_wrapper_module_17406636093974" style="color:inherit;font-size:inherit;line-height:inherit"><table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+            <tbody>
+            <tr>
+            <td class="m_-2172027481938202562hs_padded" align="center" valign="top" style="font-family:Arial,sans-serif;color:#23496d;word-break:break-word;text-align:center;padding:10px 20px;font-size:0px">
+            <img alt="$wkftszli9" src="https://ci3.googleusercontent.com/meips/ADKq_NY8K_43i7nWpY4U1OuWm_aF7CxSwIHvkoOP1kqgaVPjQKw4amg8TPNZoDex1fExZ6Yhbi0jDJtspobj3zW23IlPonf17i5iCEtDaOo89C4xXE30XsY93A__XoVzbuoocPQhglhoqpHoMLNH9ALpIuAm-fS6vZRHVKE=s0-d-e1-ft#https://empresas.alura.com.br/hs-fs/hubfs/$wkftszli9.png?width=736&amp;upscale=true&amp;name=$wkftszli9.png" style="outline:none;text-decoration:none;max-width:100%;font-size:16px" width="368" align="middle" class="m_-2172027481938202562stretch-on-mobile CToWUd" data-bit="iit">
+            </td>
+            </tr>
+            </tbody>
+            </table></div>
+            <table role="presentation" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="m_-2172027481938202562hs_padded" style="font-family:Arial,sans-serif;font-size:15px;color:#23496d;word-break:break-word;padding:10px 20px"><div id="m_-2172027481938202562hs_cos_wrapper_module-0-0-2" style="color:inherit;font-size:inherit;line-height:inherit"><div id="m_-2172027481938202562hs_cos_wrapper_module-0-0-2_" style="color:inherit;font-size:inherit;line-height:inherit"><p style="line-height:175%;text-align:justify" align="justify">&nbsp;</p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#ffffff">¿Qué tal, Mariano Nicolás Perotto Ghi? ¿Conseguiste resolver el desafío de ayer?</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-family:'courier new',courier,serif;color:#ffffff">&nbsp;</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#ffffff">¡Estoy seguro que sí! Pero, para que te sientas con más confianza, al final de este correo te dejo cómo yo resolvería el desafío, ¿vale?</span></p></div></div></td></tr></tbody></table>
+            <table role="presentation" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="font-family:Arial,sans-serif;font-size:15px;color:#23496d;word-break:break-word;padding:0px 0px 10px"><div id="m_-2172027481938202562hs_cos_wrapper_module_17406638524153" style="color:inherit;font-size:inherit;line-height:inherit"><table role="none" border="0" cellpadding="0" cellspacing="0" style="vertical-align:top" width="100%">
+            <tbody><tr>
+            <td align="center" style="font-family:Arial,sans-serif;color:#23496d;font-size:0;word-break:break-word">
+            <p style="font-size:1px;border-top:2px solid #ffff00;width:100%;margin:0 auto"></p>
+
+            </td>
+            </tr>
+            </tbody></table></div></td></tr></tbody></table>
+            <table role="presentation" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="m_-2172027481938202562hs_padded" style="font-family:Arial,sans-serif;font-size:15px;color:#23496d;word-break:break-word;padding:10px 20px"><div id="m_-2172027481938202562hs_cos_wrapper_module_17406637941271" style="color:inherit;font-size:inherit;line-height:inherit"><div id="m_-2172027481938202562hs_cos_wrapper_module_17406637941271_" style="color:inherit;font-size:inherit;line-height:inherit"><p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#ffffff">¿Sabes cuando te registras en un site y, justo después, al iniciar sesión, te llama por tu nombre? Eso es lo que harás en el desafío de hoy.</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#ffffff">&nbsp;</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="color:#ffffff"><span style="font-weight:400">Cuando creas un sistema, site o aplicación, es común querer agregar algunos toques personalizados para hacer la </span><strong>experiencia en tu aplicación más rica y dinámica</strong><span style="font-weight:400">.</span></span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#ffffff">&nbsp;</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#ffffff">Hacer esto mediante programación puede no ser una tarea fácil. Dependiendo del nivel de personalización que quieras implementar, la cantidad de código que necesitarás escribir puede ser inmensa.</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#ffffff">&nbsp;</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="color:#ffffff"><span style="font-weight:400">Pero, por supuesto, puedes comenzar de una manera más sencilla. Para ello, lo importante es </span><strong>entender cómo capturar y almacenar valores dentro de variables</strong><span style="font-weight:400">. ¡Y en eso te voy a ayudar hoy!</span></span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#ffffff">&nbsp;</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#ffffff">Las variables son los bloques básicos de construcción de cualquier sistema y son esenciales para procesar cualquier tipo de información, ya sea de una persona que ha iniciado sesión en el sistema o incluso para mostrar detalles de productos en un catálogo de comercio electrónico.</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#ffffff">&nbsp;</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="color:#ffffff"><span style="font-weight:400">Por eso, hoy te voy a enseñar a </span><strong>desarrollar un programa simulando una de esas aplicaciones</strong><span style="font-weight:400">. Debe pedir al usuario </span><strong>responder 3 preguntas</strong><span style="font-weight:400">:</span></span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#ffffff">&nbsp;</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-family:'courier new',courier,serif;color:#ffffff"><span style="font-weight:400">- ¿Cuál es tu nombre?<br></span><span style="font-weight:400">- ¿Cuántos años tienes?<br></span><span style="font-weight:400">- ¿Qué lenguaje de programación estás estudiando?</span></span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#ffffff">&nbsp;</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#ffffff">A medida que se hagan las preguntas, la persona que esté usando el programa debe responder cada una de ellas.</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#ffffff">&nbsp;</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="color:#ffffff"><span style="font-weight:400">Al final, </span><strong>el sistema mostrará el mensaje</strong><span style="font-weight:400">:</span></span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#ffffff">&nbsp;</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;font-family:'courier new',courier,serif;color:#ffffff">"Hola [nombre], tienes [edad] años y ya estás aprendiendo [lenguaje]!"</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#ffffff">&nbsp;</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#ffffff">Observa que cada información entre [ ] es una de las respuestas dadas por la persona.</span></p></div></div></td></tr></tbody></table>
+            </div>
+        `;    
+        content[0].contenido = `
+            <div id="m_7979163766658949686hs_cos_wrapper_module-0-0-2_" style="color:inherit;font-size:inherit;line-height:inherit"><p style="line-height:175%"><span style="color:#ffffff"><span style="font-weight:400">¡Llegó la hora</span>,Mariano Nicolás Perotto Ghi! <span style="font-weight:400">Vas a comenzar tu jornada en el </span><strong>#7DaysOfCode</strong><span style="font-weight:400"> ;)</span><br></span><span style="color:#ffffff"><span style="font-weight:400"><br></span></span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="color:#ffffff"><span style="font-weight:400">Este primer día es muy importante. Al final de él, tendrás un nuevo conocimiento que es </span><strong>esencial para los próximos desafíos.<br><br></strong></span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#ffffff">Existe una situación muy común para quienes usan Javascript: problemas con los tipos de variables al comparar los valores de dos variables entre sí. ¡A mí me ha pasado mucho!<br><br></span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="color:#ffffff"><span style="font-weight:400">En lenguajes de programación compilados, como Java y C#, este problema se detecta </span><em><span style="font-weight:400">en tiempo de compilación</span></em><span style="font-weight:400">, y tienes un aviso claro del error mientras desarrollas el código.</span></span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#ffffff">&nbsp;</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="color:#ffffff"><span style="font-weight:400">En JavaScript, estos errores pasan desapercibidos, ya que </span><strong>el código no pasa por un compilador</strong><span style="font-weight:400">. Es decir, los errores solo aparecen </span><em><span style="font-weight:400">en tiempo de ejecución</span></em><span style="font-weight:400">.</span></span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#ffffff">&nbsp;</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="color:#ffffff"><span style="font-weight:400">La parte más confusa para quienes están comenzando a aprender lógica con JavaScript es la operación de</span><strong> igualdad entre valores</strong><span style="font-weight:400">. Dependiendo de cómo escribas tu código, JavaScript hará una conversión de tipo a un tipo booleano de manera implícita (automática), y esto afectará a variables que eran Strings, Numbers, Object, etc.</span></span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#ffffff">&nbsp;</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="color:#ffffff"><span style="font-weight:400">Esto causa algunos comportamientos extraños, como todos estos ejemplos a continuación que retornan </span><strong><em>true</em></strong><span style="font-weight:400">:</span></span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#ffffff">&nbsp;</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-family:'courier new',courier,serif;color:#ffffff">console.log( false == '0' );</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-family:'courier new',courier,serif;color:#ffffff">console.log( null == undefined );</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-family:'courier new',courier,serif;color:#ffffff">console.log( " \t\r\n" == 0 );</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#ffffff"><span style="font-family:'courier new',courier,serif">console.log( ' ' == 0 );</span><br><br></span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#ffffff">Lo cual no tiene necesariamente mucho sentido.</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#ffffff">&nbsp;</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="color:#ffffff"><em><span style="font-weight:400">(Puedes probar todo esto yendo a tu navegador, haciendo clic con el botón derecho, eligiendo la opción “Inspeccionar” y la pestaña “Consola”. En esa pestaña, basta con copiar y pegar cada una de las líneas anteriores para confirmar que todas realmente retornan </span></em><strong><em>true</em></strong><em><span style="font-weight:400">).</span></em></span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#ffffff">&nbsp;</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="color:#999999"><span style="font-weight:400">Por lo tanto, </span><strong>tu tarea de hoy es reescribir el código a continuación para que imprima la información de manera correcta</strong><span style="font-weight:400">, que tenga sentido y sin errores:</span></span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#999999">&nbsp;</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-family:'courier new',courier,serif;color:#ffffff">let numeroUn = 1</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-family:'courier new',courier,serif;color:#ffffff">let stringUn = '1'</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-family:'courier new',courier,serif;color:#ffffff">let numeroTreinta = 30</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-family:'courier new',courier,serif;color:#ffffff">let stringTreinta = '30'</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-family:'courier new',courier,serif;color:#ffffff">let numeroDiez = 10</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-family:'courier new',courier,serif;color:#ffffff">let stringDiez = '10'</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-weight:400;color:#ffffff"><br><br></span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-family:'courier new',courier,serif;color:#ffffff">if (<strong><em>COMPARAR numeroUn y stringUn</em></strong>) {</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-family:'courier new',courier,serif;color:#ffffff">&nbsp;&nbsp;console.log('Las variables numeroUn y stringUn tienen el mismo valor, pero tipos diferentes')</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-family:'courier new',courier,serif;color:#ffffff">} else {</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-family:'courier new',courier,serif;color:#ffffff">&nbsp;&nbsp;console.log('Las variables numeroUn y stringUn no tienen el mismo valor')</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-family:'courier new',courier,serif;color:#ffffff">}</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="color:#ffffff;font-family:'courier new',courier,serif">&nbsp;</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-family:'courier new',courier,serif;color:#ffffff">if (<em><strong>COMPARAR numeroTreinta y stringTreinta</strong></em>) {</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-family:'courier new',courier,serif;color:#ffffff">&nbsp;&nbsp;console.log('Las variables numeroTreinta y stringTreinta tienen el mismo valor y el mismo tipo')</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-family:'courier new',courier,serif;color:#ffffff">} else {</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-family:'courier new',courier,serif;color:#ffffff">&nbsp;&nbsp;console.log('Las variables numeroTreinta y stringTreinta no tienen el mismo tipo')</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-family:'courier new',courier,serif;color:#ffffff">}</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="color:#ffffff;font-family:'courier new',courier,serif">&nbsp;</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-family:'courier new',courier,serif;color:#ffffff">if (<em><strong>COMPARAR numeroDiez y stringDiez</strong></em>) {</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-family:'courier new',courier,serif;color:#ffffff">&nbsp;&nbsp;console.log('Las variables numeroDiez y stringDiez tienen el mismo valor, pero tipos diferentes')</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-family:'courier new',courier,serif;color:#ffffff">} else {</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-family:'courier new',courier,serif;color:#ffffff">&nbsp;&nbsp;console.log('Las variables numeroDiez y stringDiez no tienen el mismo valor')</span></p>
+            <p style="line-height:175%;text-align:justify" align="justify"><span style="font-family:'courier new',courier,serif;color:#ffffff">}</span></p></div>
+        `;
+
+        content.map((x)=> createElement(x));
+    </script>
+</body>
+</html>
