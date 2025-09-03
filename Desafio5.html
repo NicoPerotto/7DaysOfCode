@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Desafío Alura 4</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.min.css">
+    <style>
+    </style>
+</head>
+<body>
+
+    <main id="container" class="container">
+        <h1>Lista del supermercado</h1>
+        <p id="mssge">¿qué alimento deseas agregar?</p>
+        <div class="grid">
+            <input type="text" id="inputProduct" placeholder="Escribe tu producto aquí">
+            <select id='inputType' name="select">
+
+            </select>
+            <button id='buttonSend' onclick="addItem();">Agregar</button>
+        </div>
+        <button id='buttonEnd' onclick="endList();">Cerrar Lista</button>
+        <div id="itemList" class="grid"></div>
+    </main>
+
+    <script>
+        const PRODUCT_TYPES = ['frutas', 'lácteos', 'congelados', 'dulces'];
+        const selectElement = document.getElementById('inputType');
+        // Llenar el select con las opciones
+        PRODUCT_TYPES.forEach(type => {
+        const option = new Option(type, type);
+        selectElement.add(option);
+        });
+        
+        let marketList = [];
+
+/*         let marketList = [
+            { product: 'yogur', type: 'lácteos' },
+            { product: 'galletas', type: 'dulces' },
+            { product: 'pescado', type: 'congelados' },
+            { product: 'naranja', type: 'frutas' },
+            { product: 'leche', type: 'lácteos' },
+            { product: 'caramelos', type: 'dulces' },
+            { product: 'papas fritas', type: 'congelados' },
+            { product: 'banana', type: 'frutas' },
+            { product: 'helado', type: 'congelados' },
+            { product: 'chocolate', type: 'dulces' },
+            { product: 'queso', type: 'lácteos' },
+            { product: 'manzana', type: 'frutas' }
+        ]; */
+
+        let inputProduct = document.getElementById('inputProduct');
+        let inputType = document.getElementById('inputType');
+        let itemList = document.getElementById('itemList');
+
+
+
+        function addItem(){
+            marketList.push({product:inputProduct.value,type:inputType.value})
+            inputProduct.value = '';
+            makeList();
+        }
+
+        function endList(){
+            ['inputProduct', 'inputType', 'buttonEnd', 'buttonSend', 'mssge']
+            .forEach(el => document.getElementById(el).style.display = 'none');
+            makeList();
+        }
+
+        function makeList() {
+            itemList.innerHTML='';
+            marketList.sort((a, b) => a.type.localeCompare(b.type));
+            let list; 
+
+             // Puedes cambiar este texto
+            let = type = null;
+            for(item of marketList){
+                if(item.type != type){
+                    type = item.type;
+                    const div = document.createElement('div');
+                    const p = document.createElement('p');
+                    p.innerHTML = type;
+                    list = document.createElement('ul');
+                    div.appendChild(p)
+                    div.appendChild(list)
+                    itemList.appendChild(div)
+                }
+                const li = document.createElement('li');
+                li.textContent = item.product;
+                list.appendChild(li);
+            }
+        }
+
+    </script>
+</body>
+</html>
