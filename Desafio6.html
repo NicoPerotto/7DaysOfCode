@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Desafío Alura 5s</title>
+    <title>Desafío Alura 6</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.min.css">
     <style>
     </style>
@@ -19,6 +19,7 @@
 
             </select>
             <button id='buttonSend' onclick="addItem();">Agregar</button>
+            <button id='buttonSub' onclick="subItem();">Quitar</button>
         </div>
         <button id='buttonEnd' onclick="endList();">Cerrar Lista</button>
         <div id="itemList" class="grid"></div>
@@ -35,7 +36,7 @@
         
         let marketList = [];
 
-/*         let marketList = [
+/*         let*/ marketList = [
             { product: 'yogur', type: 'lácteos' },
             { product: 'galletas', type: 'dulces' },
             { product: 'pescado', type: 'congelados' },
@@ -48,7 +49,7 @@
             { product: 'chocolate', type: 'dulces' },
             { product: 'queso', type: 'lácteos' },
             { product: 'manzana', type: 'frutas' }
-        ]; */
+        ]; 
 
         let inputProduct = document.getElementById('inputProduct');
         let inputType = document.getElementById('inputType');
@@ -57,13 +58,29 @@
 
 
         function addItem(){
+            //Con esto se logra que un solo producto sea cargado, o modificado su tipo
+            marketList = marketList.filter(item => item.product !== inputProduct.value);
             marketList.push({product:inputProduct.value,type:inputType.value})
             inputProduct.value = '';
             makeList();
         }
 
+        function subItem(){
+            const foundIndex = marketList.findIndex((element) => element.product === inputProduct.value);
+
+            if (foundIndex !== -1) {
+                marketList.splice(foundIndex, 1);
+                alert(`El producto ${inputProduct.value} fue eliminado de la lista`);
+            } else {
+                alert(`El producto ${inputProduct.value} no está en la lista`);
+            }
+
+            inputProduct.value = '';
+            makeList();
+        }
+
         function endList(){
-            ['inputProduct', 'inputType', 'buttonEnd', 'buttonSend', 'mssge']
+            ['inputProduct', 'inputType', 'buttonEnd', 'buttonSend', 'buttonSub', 'mssge']
             .forEach(el => document.getElementById(el).style.display = 'none');
             makeList();
         }
